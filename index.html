@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwiqie </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./card.css">
+    <link rel="stylesheet" href="./filters.css">
+    
+</head>
+<body>
+    <nav>
+        <div id="page-title">Qwiqie.com</div>
+        <div id="description">
+            <br>
+            <p>Find your perfect match for exotic quality services</p>
+        </div>
+        <div id="login-wrapper">
+            <div id="login">Login</div>
+            <div id="register">Register</div>
+        </div>
+    </nav>
+    <section id="filters">
+        <form action="#" id="gender-filter" class="filter-form">
+            <div id="gender" class="filter-wrapper">
+                <div class="filter-title">Gender</div>
+                <label class="btn-filter no-wrap">
+                    <input type="radio" name="gender" id="straight-female" class="input-gender"> Female
+                </label>
+                <label class="btn-filter no-wrap">
+                    <input class="input-gender" type="radio" name="gender" id="straight-male"> Male
+                </label>
+            </div>
+            <!-- <input type="submit" style="display: none;"> -->
+        </form>
+        <form action="#" id="female-filters" class="filter-form">
+            <div id="body-type_filter" class="filter-wrapper">
+                <div class="filter-title">Body Type</div>
+                <label class="btn-filter no-wrap"><input type="radio" name="body-type" id="petite"> Petite</label>
+                <label class="btn-filter no-wrap"><input type="radio" name="body-type" id="medium"> Medium</label>
+                <label class="btn-filter no-wrap"><input type="radio" name="body-type" id="curvy"> Curvy</label>
+            </div>
+            <div id="age_filter" class="filter-wrapper">
+                <div class="filter-title">Age</div>
+                <label class="btn-filter no-wrap"><input type="radio" name="age" id="18-25"> 20 - 25</label>
+                <label class="btn-filter no-wrap"><input type="radio" name="age" id="26-35"> 26 - 30</label>
+                <label class="btn-filter no-wrap"><input type="radio" name="age" id="36-45"> over 30</label>
+            </div>
+            <div id="complexion-filter" class="filter-wrapper">
+                <div class="filter-title">Skin Color</div>
+                <label class="btn-filter no-wrap"><input type="radio" name="complexion" id="dark"> Dark Skin</label>
+                <label class="btn-filter no-wrap"><input type="radio" name="complexion" id="chocolate"> Chocolate</label>
+                <label class="btn-filter no-wrap"><input type="radio" name="complexion" id="light-skin"> Light Skin</label>
+            </div>
+            <div>
+                <input type="submit" value="Filter" class="green-button">
+            </div>
+        </form>
+    </section>
+    <section id="ads-wrapper">
+        <div id="counties">
+            <div id="counties-title" class="bg-black color-white">
+                <h2>Select Location</h2> 
+            </div>
+            <!-- <div id="Nairobi" class="county">
+                <div class="county-name">
+                    Nairobi
+                    <img src="assets/svg/caret-down-solid.svg" alt="caret-down-solid" class="caret">
+                </div>
+                <ul class="towns" style="display: none;">
+                    <li class="town">Nairobi Central</li>
+                    <li class="town">Westlands</li>
+                    <li class="town">Karen</li>
+                    <li class="town">Lang'ata</li>
+                    <li class="town">Kilimani</li>
+                </ul>
+            </div> -->
+        <div class="county">
+            <div class="county-name">
+                Nairobi
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Embakasi</li><li class="town">Kilimani</li><li class="town">Karen</li><li class="town">Westlands</li><li class="town">Langata</li><li class="town">Nairobi central</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Mombasa
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Likoni</li><li class="town">Nyali</li><li class="town">Changamwe</li><li class="town">Kisauni</li><li class="town">Mtongwe</li><li class="town">Shanzu</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kisumu
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Milimani</li><li class="town">Nyalenda</li><li class="town">Kondele</li><li class="town">Mamboleo</li><li class="town">Dunga</li><li class="town">Kibos</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Nakuru
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Naivasha</li><li class="town">Gilgil</li><li class="town">Rongai</li><li class="town">Njoro</li><li class="town">Molo</li><li class="town">Subukia</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kiambu
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Thika</li><li class="town">Ruiru</li><li class="town">Githunguri</li><li class="town">Limuru</li><li class="town">Kikuyu</li><li class="town">Kiambu town</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Machakos
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Kangundo</li><li class="town">Mavoko</li><li class="town">Masinga</li><li class="town">Matungulu</li><li class="town">Machakos town</li><li class="town">Yatta</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Nyeri
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Karatina</li><li class="town">Othaya</li><li class="town">Mukurweini</li><li class="town">Nyeri town</li><li class="town">Kieni</li><li class="town">Tetu</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Meru
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Timau</li><li class="town">Maua</li><li class="town">Nkubu</li><li class="town">Meru town</li><li class="town">Tigania</li><li class="town">Igembe</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Embu
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Runyenjes</li><li class="town">Siakago</li><li class="town">Embu town</li><li class="town">Kiritiri</li><li class="town">Manyatta</li><li class="town">Mbeere</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kakamega
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Mumias</li><li class="town">Butere</li><li class="town">Shinyalu</li><li class="town">Malava</li><li class="town">Kakamega town</li><li class="town">Navakholo</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Bungoma
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Webuye</li><li class="town">Kimilili</li><li class="town">Chwele</li><li class="town">Sirisia</li><li class="town">Bungoma town</li><li class="town">Mt elgon</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kisii
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Nyamache</li><li class="town">Suneka</li><li class="town">Kisii town</li><li class="town">Masimba</li><li class="town">Tabaka</li><li class="town">Keumbu</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Nyamira
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Nyamira town</li><li class="town">Keroka</li><li class="town">Ekerenyo</li><li class="town">Magwagwa</li><li class="town">Manga</li><li class="town">Gesima</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kericho
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Litein</li><li class="town">Kericho town</li><li class="town">Sosiot</li><li class="town">Kipkelion</li><li class="town">Chepseon</li><li class="town">Fort tenan</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Bomet
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Bomet town</li><li class="town">Sotik</li><li class="town">Kaplong</li><li class="town">Longisa</li><li class="town">Silibwet</li><li class="town">Chebole</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Narok
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Narok town</li><li class="town">Kilgoris</li><li class="town">Lolgorien</li><li class="town">Suswa</li><li class="town">Entasekera</li><li class="town">Ololulung'a</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kajiado
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Kajiado town</li><li class="town">Ngong</li><li class="town">Kitengela</li><li class="town">Isinya</li><li class="town">Loitokitok</li><li class="town">Namanga</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Laikipia
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Nyahururu</li><li class="town">Nanyuki</li><li class="town">Rumuruti</li><li class="town">Kinamba</li><li class="town">Sipili</li><li class="town">Wiyumiririe</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Nyandarua
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Ol kalou</li><li class="town">Njabini</li><li class="town">Engineer</li><li class="town">Mirangine</li><li class="town">Kipipiri</li><li class="town">Shamata</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Murang'a
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Murang'a town</li><li class="town">Kangema</li><li class="town">Kandara</li><li class="town">Kenol</li><li class="town">Maragua</li><li class="town">Kiria-ini</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Tharaka nithi
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Chuka</li><li class="town">Marimanti</li><li class="town">Gatunga</li><li class="town">Muthambi</li><li class="town">Kathwana</li><li class="town">Chiakariga</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kitui
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Kitui town</li><li class="town">Mwingi</li><li class="town">Mutomo</li><li class="town">Kyuso</li><li class="town">Ikutha</li><li class="town">Kabati</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Makueni
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Wote</li><li class="town">Mtito andei</li><li class="town">Makindu</li><li class="town">Kibwezi</li><li class="town">Sultan hamud</li><li class="town">Kathonzweni</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Taita taveta
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Voi</li><li class="town">Taveta</li><li class="town">Wundanyi</li><li class="town">Mwatate</li><li class="town">Maungu</li><li class="town">Ndii</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kwale
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Ukunda</li><li class="town">Diani</li><li class="town">Kwale town</li><li class="town">Kinango</li><li class="town">Lunga lunga</li><li class="town">Shimba hills</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Kilifi
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Malindi</li><li class="town">Kilifi town</li><li class="town">Watamu</li><li class="town">Mtwapa</li><li class="town">Kaloleni</li><li class="town">Gongoni</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Lamu
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Lamu town</li><li class="town">Mpeketoni</li><li class="town">Kiunga</li><li class="town">Faza</li><li class="town">Shela</li><li class="town">Matondoni</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Tana river
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Hola</li><li class="town">Bura</li><li class="town">Garsen</li><li class="town">Madogo</li><li class="town">Wenje</li><li class="town">Kipini</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Garissa
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Garissa town</li><li class="town">Dadaab</li><li class="town">Masalani</li><li class="town">Hulugho</li><li class="town">Modogashe</li><li class="town">Balambala</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Wajir
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Wajir town</li><li class="town">Griftu</li><li class="town">Habaswein</li><li class="town">Eldas</li><li class="town">Tarbaj</li><li class="town">Bute</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Mandera
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Mandera town</li><li class="town">Elwak</li><li class="town">Lafey</li><li class="town">Takaba</li><li class="town">Banisa</li><li class="town">Rhamu</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Marsabit
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Marsabit town</li><li class="town">Moyale</li><li class="town">Sololo</li><li class="town">Loiyangalani</li><li class="town">North horr</li><li class="town">Laisamis</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Isiolo
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Isiolo town</li><li class="town">Garbatulla</li><li class="town">Kina</li><li class="town">Merti</li><li class="town">Kipsing</li><li class="town">Oldonyiro</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Samburu
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Maralal</li><li class="town">Baragoi</li><li class="town">Archers post</li><li class="town">Wamba</li><li class="town">Lodokejek</li><li class="town">South horr</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Turkana
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Lodwar</li><li class="town">Kalokol</li><li class="town">Lokichoggio</li><li class="town">Kakuma</li><li class="town">Lokitaung</li><li class="town">Lorugum</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                West pokot
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Kapenguria</li><li class="town">Chepareria</li><li class="town">Ortum</li><li class="town">Lomut</li><li class="town">Sigor</li><li class="town">Alale</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Elgeyo marakwet
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Itens</li><li class="town">Kapsowar</li><li class="town">Chebiemit</li><li class="town">Tambach</li><li class="town">Chesoi</li><li class="town">Kapcherop</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Nandi
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Kapsabet</li><li class="town">Nandi hills</li><li class="town">Mosoriot</li><li class="town">Kabiyet</li><li class="town">Chepterit</li><li class="town">Lessos</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Uasin gishu
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Eldoret</li><li class="town">Moiben</li><li class="town">Ziwa</li><li class="town">Kesses</li><li class="town">Turbo</li><li class="town">Kapseret</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Trans nzoia
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Kitale</li><li class="town">Kiminini</li><li class="town">Endebess</li><li class="town">Cherangany</li><li class="town">Saboti</li><li class="town">Kesogon</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Bungoma
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Bungoma town</li><li class="town">Webuye</li><li class="town">Kimilili</li><li class="town">Chwele</li><li class="town">Sirisia</li><li class="town">Mt elgon</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Busia
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Busia town</li><li class="town">Malaba</li><li class="town">Nambale</li><li class="town">Butula</li><li class="town">Funyula</li><li class="town">Port victoria</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Siaya
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Siaya town</li><li class="town">Bondo</li><li class="town">Ugenya</li><li class="town">Gem</li><li class="town">Rarieda</li><li class="town">Alego usonga</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Homabay
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Homabay town</li><li class="town">Mbita</li><li class="town">Kendu bay</li><li class="town">Oyugis</li><li class="town">Rangwe</li><li class="town">Ndhiwa</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Migori
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Migori town</li><li class="town">Awendo</li><li class="town">Rongo</li><li class="town">Kuria</li><li class="town">Nyatike</li><li class="town">Uriri</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Vihiga
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Mbale</li><li class="town">Luanda</li><li class="town">Hamisi</li><li class="town">Sabatia</li><li class="town">Emuhaya</li><li class="town">Tiriki</li>
+            </ul>
+        </div><div class="county">
+            <div class="county-name">
+                Tharaka nithi
+                <svg width="18" height="24" viewBox="0 0 24 24" fill="#f799d6" xmlns="http://www.w3.org/2000/svg" class="caret">
+    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.79 12 5.05C13.09 3.79 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.28 18.6 15.36 13.45 20.03L12 21.35Z"></path>
+    </svg>
+            </div>
+            <ul class="towns" style="display: none;">
+                <li class="town">Chuka</li><li class="town">Marimanti</li><li class="town">Gatunga</li><li class="town">Muthambi</li><li class="town">Kathwana</li><li class="town">Chiakariga</li>
+            </ul>
+        </div></div>
+        <div id="ads">
+            <div class="ads">
+                <h2>VIP</h2>
+                <div class="ads-flex" id="vip-ads">
+                    
+                <div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Diana</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Jane</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Mary</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Susan</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Linda</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Rose</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div></div>
+            </div>
+            <div class="ads">
+                <br>
+                <h2>VERIFIED</h2>
+                <div class="ads-flex" id="verified-ads">                  
+                <div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Diana</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Jane</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Mary</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Susan</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Linda</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Rose</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div></div>
+            </div>
+            <div class="ads">
+                <br>
+                <h2>GENERAL</h2>
+                <div class="ads-flex" id="general-ads">
+                    
+                <div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Diana</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Jane</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Mary</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Susan</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Linda</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div><div class="card">
+        <div class="image-wrapper">
+        <img src="./escort.jpg" alt="Card Image" class="card-image">
+        <div class="transparent-details">
+            <div class="escort-name">Rose</div>
+            <div class="escort-location">Thika</div>
+        </div>
+        </div>
+        <div class="escort-phone">
+        <span class="phone-icon"></span>
+        <a href="tel:+254712345678" class="escort-phone">+254712345678</a>
+        </div> 
+        </div></div>
+            </div>
+        </div>
+    </section>
+    <div style="display: none;" id="escort_filters">
+        <form action="file:///C:/Users/cassim/Desktop/DevNet/qwiqietest/qwiqie/index.html">
+            
+        </form>
+    </div>
+    <img src="./escort.jpg" alt="close" id="escort-card-image" style="display: none;">
+    <footer>
+        <div id="about-us" class="padding-medium about-us">
+            <h5>About us</h5>
+            <p>We are a digital marketing agency. We provide digital infrastructure for escorts 
+                and escort agency to scale their business</p>
+        </div>
+        <div id="contact-us" class="padding-medium">
+            <h5>Contact us</h5>
+            <div>
+                <p>Email: info@qwiqie.com</p>
+            </div>
+            <div>
+                <p>Phone: 0701986756</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+
+    const countyNames = document.querySelectorAll('.county-name');
+
+    countyNames.forEach(countyName => {
+        countyName.addEventListener('click', () => {
+            const towns = countyName.nextElementSibling;
+            const caret = countyName.querySelector('svg.caret');
+
+            if (towns && towns.classList.contains('towns')) {
+                const isVisible = towns.style.display === 'block';
+                towns.style.display = isVisible ? 'none' : 'block';
+
+                if (caret) {
+                    caret.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+                }
+            }
+        });
+    });
+
+    // Updated version using counties.querySelector('.towns')
+
+
+    const towns = document.querySelectorAll('li.town');
+
+    towns.forEach(town => {
+        town.addEventListener('click', () => {
+            const filterForm = document.getElementById('escort_filters');
+            filterForm.submit()
+        })
+    })
+
+
+    const genderInputs = document.querySelectorAll('.input-gender');
+
+    genderInputs.forEach(gender => {
+        gender.addEventListener('click', () => {
+            const genderFilter = document.getElementById('gender-filter')
+            genderFilter.submit()
+        })
+    })
+
+    </script>
+
+
+</body></html>
