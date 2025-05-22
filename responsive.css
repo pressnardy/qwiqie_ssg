@@ -87,3 +87,10 @@ button#search-button {
     padding-bottom: 16px;
     }
 }
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    #description {
+        display: none;
+    }
+}
+
